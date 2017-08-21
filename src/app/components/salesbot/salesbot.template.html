@@ -1,0 +1,39 @@
+<div id="salesbot" ng-class="{'salesbot-show-cta': vm.showCta, 'is-full': vm.isFull}">
+
+    <div class="salesbot-wrapper">
+        <div class="salesbot-content">
+            <div ng-if="vm.isFull" class="salesbot-message-header text-center">
+                <h4>Book a demo</h4>
+            </div>
+        <div ng-if="vm.showCta" class="salesbot-cta">
+
+            <div class="salesbot-message-area" ng-style="{'height': vm.messageHeight + 'px'}">
+                <div class="message-block">
+                    <salesbot-message-item is-full="vm.isFull" user="salesbot" message="<p>Hi, would you like to book a demo?</p><p>Just let us know if you really want to book a demo, and we will help you.</p>"></salesbot-message-item>
+                
+                </div>
+                <div class="message-block"ng-repeat="message in vm.messages">
+                    <salesbot-message-item user="user" message="{{message}}"></salesbot-message-item>
+                </div>
+            </div>
+        </div>
+        <div ng-if="vm.isFull"  class="salesbot-message-input">
+            <form name="message-input">
+            <input focus-input placeholder="{{vm.placeholder}}" ng-model="vm.userMessage" ng-keyup="vm.sendMessage($event)" class="form-control"></input>
+            </form>
+        </div>
+        </div>
+        <div class="salesbot-icon-wrapper">
+            <div class="salesbot-icon" ng-click="vm.isFull = !vm.isFull">
+
+                <div class="animated" ng-hide="vm.isFull">
+                <salesbot-logo></salesbot-logo>
+            </div>
+                <div ng-show="vm.isFull" class="salesbot-icon-close animated">
+                    <svg id="salesbot-close" data-name="salesbot-close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 76.46 76.46"><defs><style>.cls-1{fill:#fff;}</style></defs><title>salesbot-close</title><path class="cls-1" d="M676.2,540.65l-28.8-28.8,28.8-28.8a5.67,5.67,0,0,0,.38-8h0a5.67,5.67,0,0,0-8,.38l-28.8,28.8L611,475.46a5.67,5.67,0,0,0-8-.38h0a5.67,5.67,0,0,0,.38,8l28.8,28.8-28.8,28.8a5.39,5.39,0,1,0,7.59,7.59l28.8-28.8,28.8,28.8a5.39,5.39,0,1,0,7.59-7.59Z" transform="translate(-601.58 -473.62)"/></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

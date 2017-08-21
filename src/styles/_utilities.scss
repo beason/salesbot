@@ -1,4 +1,20 @@
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 .v-align {
-  display: flex;
-  align-items: center;
+@include vertical-align();
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.padding-40 {
+    padding: 40px;
 }

@@ -1,0 +1,15 @@
+<div ng-if="vm.user === 'salesbot'" class="salesbot-outer-message">
+    <span class="message-avatar">
+        <salesbot-logo></salebot-logo>
+    </span>
+    <span ng-bind-html="vm.message"></span>
+    <div><a class="" ng-click="vm.isFull = !vm.isFull">Book a demo</a></div>
+</div>
+
+<div ng-if="vm.user === 'user'" class="salesbot-outer-message user-message animated fadeIn pull-right">
+    <span class="message-avatar">
+
+    </span>
+    <span ng-bind-html="vm.message"></span>
+
+</div>

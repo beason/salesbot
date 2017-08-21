@@ -1,0 +1,75 @@
+#salesbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    width: 360px;
+    z-index: 4;
+
+    .salesbot-wrapper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        text-align: right;
+
+        .salesbot-icon-wrapper {
+            text-align: right;
+            padding-top: 5px;
+        }
+    }
+
+
+
+
+    &.salesbot-show-cta {
+
+        .salesbot-icon {
+
+
+        #logo {
+            transform: translateY(9px);
+
+            .dot {
+                animation: wave 1.2s linear infinite;
+
+                &:nth-child(2) {
+                    animation-delay: -0.8s;
+                }
+
+                &:nth-child(3) {
+                    animation-delay: -1s;
+                }
+            }
+        }
+            }
+
+        .salesbot-cta {
+            animation: fadeInUp 0.3s ease;
+        }
+    }
+
+    &.is-full {
+        .salesbot-message-area {
+            height: 400px!important;
+            padding: 15px;
+            background: #f2f2f2;
+            overflow: hidden;
+            overflow-y: scroll;
+
+            .salesbot-outer-message {
+                width: 85%;
+                box-shadow: none;
+                background-clip: padding-box;
+                    border: 1px solid rgba(23,24,26,0.11);
+            }
+        }
+
+        .salesbot-content {
+            background: $brand-color;
+            overflow: hidden;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 40px rgba(0,0,0,.16);
+        }
+    }
+}

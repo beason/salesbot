@@ -1,0 +1,10 @@
+@keyframes wave {
+    0%,
+    50% {
+        opacity: initial;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
