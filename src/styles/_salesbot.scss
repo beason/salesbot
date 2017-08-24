@@ -28,7 +28,7 @@
 
 
         #logo {
-            transform: translateY(9px);
+            transform: translateY(7px);
 
             .dot {
                 animation: wave 1.2s linear infinite;
@@ -52,24 +52,28 @@
     &.is-full {
         .salesbot-message-area {
             height: 400px!important;
-            padding: 15px;
+            padding: 5px;
             background: #f2f2f2;
             overflow: hidden;
             overflow-y: scroll;
+            margin-bottom: 0px;
 
             .salesbot-outer-message {
-                width: 85%;
+                width: 100%;
+                background: none;
                 box-shadow: none;
                 background-clip: padding-box;
-                    border: 1px solid rgba(23,24,26,0.11);
+                    border: none;
             }
         }
 
         .salesbot-content {
             background: $brand-color;
+            background-clip: padding-box;
+                border: 1px solid rgba(23,24,26,0.11);
             overflow: hidden;
             margin-bottom: 20px;
-            box-shadow: 0 5px 40px rgba(0,0,0,.16);
+            box-shadow: 0 35px 90px -25px rgba(0,0,0,0.4), 0 -10px 90px -25px rgba(0,0,0,0.2);
         }
     }
 }

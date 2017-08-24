@@ -10,17 +10,21 @@
             <div class="salesbot-message-area" ng-style="{'height': vm.messageHeight + 'px'}">
                 <div class="message-block">
                     <salesbot-message-item is-full="vm.isFull" user="salesbot" message="<p>Hi, would you like to book a demo?</p><p>Just let us know if you really want to book a demo, and we will help you.</p>"></salesbot-message-item>
-                
+
                 </div>
                 <div class="message-block"ng-repeat="message in vm.messages">
                     <salesbot-message-item user="user" message="{{message}}"></salesbot-message-item>
                 </div>
+
             </div>
         </div>
         <div ng-if="vm.isFull"  class="salesbot-message-input">
+<div class="message-input-wrapper" ng-class="{'message-input-out': vm.isLoading}">
             <form name="message-input">
             <input focus-input placeholder="{{vm.placeholder}}" ng-model="vm.userMessage" ng-keyup="vm.sendMessage($event)" class="form-control"></input>
             </form>
+        </div>
+            <salesbot-message-thinking is-loading="vm.isLoading" message="vm.statusMessage"></salesbot-message-thinking>
         </div>
         </div>
         <div class="salesbot-icon-wrapper">

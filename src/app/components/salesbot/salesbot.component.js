@@ -13,8 +13,13 @@
     function SalesbotController($timeout,$scope) {
         var vm = this;
         vm.showCta = false;
+        vm.isLoading = false;
         vm.messages = [];
-        vm.placeholder = "When would you like to book?"
+        vm.placeholdersCount = 0;
+        vm.placeholders = ['When are you free?','Does this date work for you?','Whats your email address?']
+        vm.statusMessages = ['checking for availability','booking demo','sending confirmation']
+        vm.statusMessage = vm.statusMessages[vm.placeholdersCount]
+        vm.placeholder = vm.placeholders[vm.placeholdersCount];
         $timeout(function() {
             vm.showCta = true;
             $timeout(function() {
@@ -26,12 +31,21 @@
         vm.sendMessage = sendMessage;
         vm.scrollBottom = scrollBottom;
         function sendMessage(event) {
-            if (event.keyCode === 13){
 
+            if (event.keyCode === 13){
+        vm.isLoading = true;
                 vm.messages.push(vm.userMessage)
                 vm.userMessage = '';
                 $timeout(function() {
+                    vm.isLoading = true;
+
           scrollBottom(_.last(vm.messages), true);
+          $timeout(function() {
+              vm.placeholdersCount ++
+              vm.placeholder = vm.placeholders[vm.placeholdersCount];
+              vm.statusMessage = vm.statusMessages[vm.placeholdersCount];
+             vm.isLoading = false;
+         },5000)
         })
             }
 

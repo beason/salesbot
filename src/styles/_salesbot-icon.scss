@@ -1,7 +1,7 @@
 .salesbot-icon {
-    width: 70px;
+    width: 60px;
     position: relative;
-    height: 70px;
+    height: 60px;
     background-color: $brand-color;
     border-radius: 100px;
     text-align: right;
@@ -17,7 +17,7 @@
     #logo {
         fill: $white;
         display: inline-block;
-        transform: translateY(34px);
+        transform: translateY(30px);
         transition-duration: 0.19s;
         transition-timing-function: ease-in-out;
         transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
@@ -31,7 +31,7 @@
     bottom: 0px;
     left: 0px;
     background: $brand-color;
-    padding: 26px;
+    padding: 21px;
     text-align: center;
     }
 
@@ -43,7 +43,7 @@
 
 
         #logo {
-            transform: translateY(9px);
+            transform: translateY(7px);
 
             .dot {
                 animation: wave 1.2s linear infinite;
@@ -58,6 +58,8 @@
             }
         }
     }
+
+
 
     &.reverse {
         background-color: $white;

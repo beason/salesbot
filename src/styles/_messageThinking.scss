@@ -1,0 +1,48 @@
+.message-thinking {
+    transform: translateY(0px);
+    position: absolute;
+    text-align: left;
+    left: 10px;
+    right: 10px;
+    color: lighten($base-color,5%);
+    padding: 15px 10px;
+    background: $white;
+    transition-duration: 0.19s;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+
+    span {
+        opacity: 0.6;
+    }
+    #logo {
+        width: 30px;
+        margin-right: 10px;
+        position: relative;
+        top: 4px;
+
+        * {
+            fill: lighten($base-color,5%)!important;
+        }
+
+        .dot {
+            animation: wave 1.2s linear infinite;
+
+            &:nth-child(2) {
+                animation-delay: -0.8s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: -1s;
+            }
+        }
+    }
+
+    &.message-thinking-show {
+        transform: translateY(-44px);
+    }
+
+    .message-thinking-message {
+        font-size: 13px;
+
+    }
+}

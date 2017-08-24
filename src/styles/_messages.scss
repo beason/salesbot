@@ -1,5 +1,5 @@
 .salesbot-message-area {
-    padding: 10px;
+    margin-bottom: 20px;
 
     transition: height 0.3s ease;
 
@@ -7,13 +7,15 @@
         background: $white;
         border-radius: 5px;
         padding: 20px;
-        box-shadow: 0 5px 40px rgba(0,0,0,.16);
+        box-shadow: 0 35px 90px -25px rgba(0,0,0,0.3), 0 -10px 90px -25px rgba(0,0,0,0.2);
         text-align: left;
         font-size: 13px;
         padding-left: 57px;
         position: relative;
         margin-bottom: 15px;
         animation-duration: 0.25s!important;
+        background-clip: padding-box;
+            border: 1px solid rgba(23,24,26,0.11);
         animation-delay: 0.25s;
         .message-avatar {
             width: 32px;
@@ -56,9 +58,22 @@
 }
 .salesbot-message-input {
     padding: 10px;
-    border-top: 1px solid #eaeaea;
-    box-shadow: 0px -2px 20px rgba(0,0,0,.1);
+    border-top: 1px solid rgba(23,24,26,0.11);;
+
     background: $white;
+    overflow: hidden;
+    position: relative;
+    .message-input-wrapper {
+        transform: translateY(0px);
+        transition-duration: 0.19s!important;
+        transition-timing-function: ease-in-out;
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+opacity: 1;
+        &.message-input-out {
+            transform: translateY(-44px);
+            overflow: 0;
+        }
+    }
     input {
         font-size: 13px;
         border: none;

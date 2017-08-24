@@ -9,7 +9,6 @@
   function focusInput($timeout) {
     var directive = {
       restrict: 'A',
-      require: 'ngModel',
       link: link
     };
 
@@ -17,12 +16,12 @@
 
     function link(scope, element, attr) {
       scope.$watch(attr.focusInput, function(e) {
-          console.log('hello focus')
-        if (e) {
+
+
           $timeout(function() {
             element[0].focus();
-          })
-        }
+
+        });
       });
     }
   }
