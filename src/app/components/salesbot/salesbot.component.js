@@ -36,7 +36,7 @@
             if (event.keyCode === 13) {
                 vm.isLoading = true;
                 vm.messages.push(vm.userMessage)
-                // vm.userMessage = '';
+                vm.userMessage = '';
                 // $timeout(function() {
                 //     vm.isLoading = true;
                 //
@@ -62,7 +62,11 @@
                 messageService.store(data).then(success, error);
 
                 function success(response) {
-
+vm.isLoading = false;
+console.log(response)
+vm.messages.push(response.data.messages[0].text)
+console.log(vm.messages)
+scrollBottom(_.last(vm.messages), true);
                     console.log(response)
                 }
 
