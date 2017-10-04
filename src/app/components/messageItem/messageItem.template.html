@@ -1,15 +1,15 @@
-<div ng-if="vm.user === 'salesbot'" class="salesbot-outer-message">
-    <span class="message-avatar">
-        <salesbot-logo></salebot-logo>
-    </span>
-    <span ng-bind-html="vm.message"></span>
-    <div><a class="" ng-click="vm.isFull = !vm.isFull; vm.bookDemo()">Book a demo</a></div>
-</div>
 
-<div ng-if="vm.user === 'user'" class="salesbot-outer-message user-message animated fadeIn pull-right">
-    <span class="message-avatar">
+
+<div class="salesbot-outer-message animated fadeIn" ng-class="{'user-message' : vm.message.user}">
+    <span class="message-avatar" ng-if="!vm.message.user">
+      <salesbot-logo></salebot-logo>
 
     </span>
-    <span ng-bind-html="vm.message"></span>
+    <span class="message-avatar" ng-if="vm.message.user">
+    <salesbot-user-icon></salesbot-user-icon>
+
+    </span>
+
+    <span ng-bind-html="vm.message.text"></span>
 
 </div>

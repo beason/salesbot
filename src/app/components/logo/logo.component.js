@@ -11,6 +11,6 @@
 
   /* @ngInject */
   function LogoController() {
-    console.log('hellodds')
+
   }
 })();

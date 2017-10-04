@@ -9,11 +9,16 @@
 
             <div class="salesbot-message-area" ng-style="{'height': vm.messageHeight + 'px'}">
                 <div class="message-block">
-                    <salesbot-message-item is-full="vm.isFull" user="salesbot" messages="vm.messages" message="<p>Hi, would you like to book a demo?</p><p>Just let us know if you really want to book a demo, and we will help you.</p>"></salesbot-message-item>
-
+                    <div ng-if="vm.user === 'salesbot' || vm" class="salesbot-outer-message">
+                        <span class="message-avatar">
+                            <salesbot-logo></salebot-logo>
+                        </span>
+                        <p>Hi, would you like to book a demo?</p><p>Just let us know if you really want to book a demo, and we will help you.</p>
+                        <div><a class="" ng-disabled="vm.demoClicked" ng-click="vm.isFull = !vm.isFull; vm.bookDemo()">Book a demo</a></div>
+                    </div>
                 </div>
                 <div class="message-block"ng-repeat="message in vm.messages">
-                    <salesbot-message-item user="user" message="{{message}}" messages="vm.messages"></salesbot-message-item>
+                    <salesbot-message-item user="vm.user" message="message" messages="vm.messages"></salesbot-message-item>
                 </div>
 
             </div>

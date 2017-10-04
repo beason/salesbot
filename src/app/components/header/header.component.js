@@ -11,6 +11,6 @@
 
   /* @ngInject */
   function HeaderController() {
-    console.log('hellodds')
+
   }
 })();

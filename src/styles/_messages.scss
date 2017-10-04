@@ -1,98 +1,102 @@
 .salesbot-message-area {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
+  transition: height .3s ease;
 
-    transition: height 0.3s ease;
-
-    .salesbot-outer-message {
-        background: $white;
-        border-radius: 5px;
-        padding: 20px;
-        box-shadow: 0 35px 90px -25px rgba(0,0,0,0.3), 0 -10px 90px -25px rgba(0,0,0,0.2);
-        text-align: left;
-        font-size: 13px;
-        padding-left: 57px;
-        position: relative;
-        margin-bottom: 15px;
-        animation-duration: 0.25s!important;
-        background-clip: padding-box;
-            border: 1px solid rgba(23,24,26,0.11);
-        animation-delay: 0.25s;
-        .message-avatar {
-            width: 32px;
-            height: 32px;
-            top: 15px;
-            left: 15px;
-            position: absolute;
-            background: $brand-color;
-            overflow: hidden;
-            display: inline-block;
-            vertical-align: middle;
-            margin-right: 10px;
-            border-radius: 100px;
-
-            #logo {
-                padding: 5px;
-                top: 4px;
-                position: relative;
-            }
-        }
-
-        &.user-message {
-            padding-left: 20px;
-            padding-right: 57px;
-            .message-avatar {
-                right: 0px;
-                left: auto;
-                background: $base-color;
-            }
-        }
-    }
-
-    .message-block {
-        .salesbot-outer-message {
-            &:last-child {
-                margin-bottom: none;
-            }
-        }
-    }
-}
-.salesbot-message-input {
-    padding: 10px;
-    border-top: 1px solid rgba(23,24,26,0.11);;
-
+  .salesbot-outer-message {
     background: $white;
-    overflow: hidden;
+    border-radius: 5px;
+    padding: 22px;
+    box-shadow: 0 35px 90px -25px rgba(0,0,0,0.3), 0 -10px 90px -25px rgba(0,0,0,0.2);
+    text-align: left;
+    font-size: 13px;
+    padding-left: 57px;
     position: relative;
-    .message-input-wrapper {
-        transform: translateY(0px);
-        transition-duration: 0.19s!important;
-        transition-timing-function: ease-in-out;
-        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-opacity: 1;
-        &.message-input-out {
-            transform: translateY(-44px);
-            overflow: 0;
+    margin-bottom: 5px;
+    animation-duration: .25s!important;
+    background-clip: padding-box;
+    border: 1px solid rgba(23,24,26,0.11);
+    animation-delay: .25s;
+
+    .message-avatar {
+      width: 32px;
+      height: 32px;
+      top: 15px;
+      left: 15px;
+      position: absolute;
+      background: $brand-color;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      border-radius: 100px;
+
+      #logo {
+        padding: 5px;
+        top: 4px;
+        position: relative;
+      }
+    }
+
+    &.user-message {
+      .message-avatar {
+        i {
+          color: lighten($base-color,20%);
+          left: 9px;
+          position: absolute;
+          top: 6px;
+          font-size: 17px;
         }
+        background: #eaeaea;
+      }
     }
-    input {
-        font-size: 13px;
-        border: none;
-        box-shadow: none!important;
-        outline: none;
+  }
+
+  .message-block {
+    .salesbot-outer-message {
+      &:last-child {
+        margin-bottom: none;
+      }
     }
+  }
+}
+
+.salesbot-message-input {
+  padding: 10px;
+  border-top: 1px solid rgba(23,24,26,0.11);
+  background: $white;
+  overflow: hidden;
+  position: relative;
+
+  .message-input-wrapper {
+    transform: translateY(0px);
+    transition-duration: .19s!important;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    opacity: 1;
+
+    &.message-input-out {
+      transform: translateY(-44px);
+      overflow: 0;
+    }
+  }
+
+  input {
+    font-size: 13px;
+    border: none;
+    box-shadow: none!important;
+    outline: none;
+  }
 }
 
 .salesbot-message-header {
-    padding: 20px;
+  padding: 20px;
 
-
-    h4 {
-        margin: 0px;
-        color: $white;
-    }
+  h4 {
+    margin: 0;
+    color: $white;
+  }
 }
 
 .salesbot-content {
-
-    border-radius: 10px;
+  border-radius: 10px;
 }

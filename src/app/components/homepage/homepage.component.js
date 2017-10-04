@@ -11,6 +11,6 @@
 
   /* @ngInject */
   function HomepageController() {
-    console.log('hello')
+  
   }
 })();
