@@ -1,0 +1,13 @@
+$input-bg:      #fafbfc;
+$input-border:  darken($input-bg,10%);
+
+.form-control {
+  border: 1px solid $input-border;
+  background: $input-bg;
+  box-shadow: none;
+
+
+  &:focus {
+    border-color: red;
+  }
+}

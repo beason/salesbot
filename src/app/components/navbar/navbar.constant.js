@@ -10,12 +10,16 @@
               link: 'about'
           },
           {
-              title: 'Pricing',
-              link: 'pricing'
+              title: 'Register',
+              link: 'register'
           },
           {
-              title: 'Log In',
-              link: 'login'
+              title: 'Sign in',
+              link: 'signin'
+          },
+          {
+              title: 'Log out',
+              link: 'logout'
           }
       ]
     });

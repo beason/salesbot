@@ -2,26 +2,25 @@
   'use strict';
 
   angular
-    .module('salesbot')
+    .module('salesbot.authentication')
     .config(routerConfig);
 
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider
-      .state('homepage', {
-        url: '/',
-        template: '<salesbot-homepage></salesbot-homepage>',
+      .state('dashboard', {
+        url: '/dashboard',
+        template: '<salesbot-dashboard></salesbot-dashboard>',
         data: {
-            tokenTypes: ['guest'],
+          tokenTypes: ['authenticated'],
             meta: {
-              title: 'SalesBot',
+              title: 'Dashboard',
               description: ''
             }
+
         }
       });
 
-    $urlRouterProvider.otherwise('/');
-    $locationProvider.html5Mode(true);
   }
 
 })();

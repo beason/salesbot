@@ -1,0 +1,41 @@
+<h1>Register</h1>
+<form name="registrationFormAccount" novalidate>
+  <div class="row">
+
+    <div class="col-sm-12">
+        <label for="email" class="control-label">Name</label>
+      <div class="form-group">
+        <input name="name" id="name" ng-model="vm.registerModel.name" class="form-control" required>
+      </div>
+    </div>
+  </div>
+
+<div class="row">
+
+  <div class="col-sm-12">
+      <label for="email" class="control-label">Email</label>
+    <div class="form-group">
+      <input type="email" name="email" id="email" ng-model="vm.registerModel.email" class="form-control" placeholder="example@email.com" required autocomplete="off" maxlength="150" ng-maxlength="150">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-sm-12">
+      <label for="email" class="control-label">Password</label>
+    <div class="form-group">
+      <input type="password" name="password" id="password" ng-model="vm.registerModel.password" class="form-control" required>
+    </div>
+  </div>
+</div>
+
+<pre>{{vm.registerModel}}</pre>
+
+<div class="investor-details-actions">
+
+  <button id="sumbitAccount" class="btn btn-default pull-right" ng-disabled="registrationFormAccount.$invalid" ng-click="vm.submit();">
+      Register
+            </button>
+</div>
+</form>

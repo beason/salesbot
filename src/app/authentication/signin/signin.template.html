@@ -1,0 +1,52 @@
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7 brand-bg full-height">
+
+        </div>
+        <div class="col-xs-12 col-sm-5 white-bg full-height">
+            <div class="v-align padding-40">
+
+                <h3>Sign in</h3>
+                <form name="signinFormAccount" novalidate>
+                  <div class="row">
+
+                    <div class="row">
+
+                      <div class="col-sm-12">
+                          <label for="email" class="control-label">Email</label>
+                        <div class="form-group">
+                          <input type="email" name="email" id="email" ng-model="vm.signinModel.email" class="form-control" placeholder="example@email.com" required autocomplete="off">
+                        </div>
+                      </div>
+                    </div>
+
+
+
+                <div class="row">
+
+                  <div class="col-sm-12">
+                      <label for="email" class="control-label">Password</label>
+                    <div class="form-group">
+                      <input type="password" name="password" id="password" ng-model="vm.signinModel.password" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+
+                <pre>{{vm.signinModel}}</pre>
+
+                <div class="investor-details-actions">
+
+                  <button id="sumbitAccount" class="btn btn-default pull-right" ng-disabled="signinFormAccount.$invalid" ng-click="vm.submit();">
+                      Sign in
+                            </button>
+                </div>
+                </form>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

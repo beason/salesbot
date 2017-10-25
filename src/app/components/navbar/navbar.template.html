@@ -1,5 +1,5 @@
 <div class="navbar-wrapper">
-    <div ng-repeat="item in vm.nav" class="navbar-item">
+    <div ng-repeat="item in vm.nav" class="navbar-item" ui-sref="{{item.link}}">
         {{item.title}}
     </div>
 </div>
