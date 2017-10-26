@@ -1,0 +1,13 @@
+.btn-brand {
+  background-color: $brand-color;
+  color: rgba(255,255,255,0.9);
+  border: 1px solid darken($brand-color,8%);
+  height: 50px;
+  &:hover,
+  &:focus {
+    color: rgba(255,255,255,1);
+    background-color: darken($brand-color,4%)
+  }
+
+
+}

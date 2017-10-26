@@ -3,6 +3,8 @@ body {
   background: $white;
   color: $base-color;
   font-size: 1.5em;
+  letter-spacing: normal;
+
 }
 
 a {
@@ -22,8 +24,8 @@ a[disabled], a[disabled]:hover {
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: $heading-font;
-    font-weight: 600;
+    font-family: $font-family;
+    font-weight: 300;
     color: $heading-color;
     margin-top: 0px;
 }

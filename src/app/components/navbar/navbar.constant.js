@@ -7,19 +7,23 @@
       nav: [
           {
               title: 'About Us',
-              link: 'about'
+              link: 'about',
+              state: false
           },
           {
               title: 'Register',
-              link: 'register'
+              link: 'register',
+              state: false
           },
           {
               title: 'Sign in',
-              link: 'signin'
+              link: 'signin',
+              state: false
           },
           {
               title: 'Log out',
-              link: 'logout'
+              link: 'logout',
+              state: true
           }
       ]
     });

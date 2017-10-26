@@ -10,9 +10,11 @@
     });
 
   /* @ngInject */
-  function NavbarController(navmenu) {
+  function NavbarController(navmenu, $rootScope) {
       var vm = this;
 
       vm.nav = navmenu.nav;
+      vm.state = $rootScope.isLoggedIn
+
   }
 })();
