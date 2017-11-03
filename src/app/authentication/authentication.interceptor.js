@@ -20,9 +20,8 @@
       'response': function (response) {
 
         if (response.headers('content-type') === 'application/json') {
-console.log(response.headers())
+
           var token = response.headers(API.tokenName);
-          console.log(response.headers(API.tokenName));
           if (token !== null) {
             $window.localStorage.token = token;
           }

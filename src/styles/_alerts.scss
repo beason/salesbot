@@ -1,0 +1,9 @@
+.alert {
+  padding: 15px;
+  min-height: 50px;
+    border-radius: 6px;
+  &.error {
+    background: rgba($error-red, 0.1);
+    color: $error-red;
+  }
+}

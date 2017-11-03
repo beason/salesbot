@@ -10,12 +10,19 @@
     });
 
   /* @ngInject */
-  function RegisterController($state, toastr, jsonApiReHydrate, apiService) {
+  function RegisterController($state, toastr, jsonApiReHydrate, apiService, $location) {
 
     var vm = this;
 
     vm.registerModel = {};
+    vm.location = $location;
+    console.log(vm.location.search().invite)
 
+    if(vm.location.search().invite) {
+      vm.registerModel.licence_id = vm.location.search().invite;
+    }
+
+    console.log( vm.registerModel)
     vm.submit = submit;
 
     function submit() {
@@ -23,6 +30,10 @@
        resource: 'register',
        data: vm.registerModel
      };
+
+
+
+
 
      apiService.store(data).then(success, error);
 
@@ -32,6 +43,7 @@
      }
      function error(response) {
        console.log(response)
+
      }
     }
 

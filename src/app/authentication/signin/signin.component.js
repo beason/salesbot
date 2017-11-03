@@ -13,15 +13,12 @@
   function SigninController($state, toastr, jsonApiReHydrate, apiService) {
 
     var vm = this;
-
-    vm.signinModel = {
-      email: 'hi.there@bmjeason.co.uk',
-      password: '1234567'
-    };
+    vm.hasError = false;
 
     vm.submit = submit;
 
     function submit() {
+  
       var data = {
        resource: 'authenticate',
        data: vm.signinModel
@@ -34,7 +31,7 @@
        $state.go('dashboard');
      }
      function error(response) {
-
+        vm.hasError = true;
      }
     }
 

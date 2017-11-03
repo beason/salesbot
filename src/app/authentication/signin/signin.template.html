@@ -13,15 +13,21 @@
     <div class="col-sm-5 full-height">
       <div class="v-align">
 
+        <div class="row animated" ng-if="vm.hasError" >
+          <div class="col-sm-12">
+            <div class="alert error">
+              The email address or password you entered is incorrect.
+            </div>
+          </div>
+        </div>
 
-
-      <form name="registrationFormAccount" novalidate>
+      <form name="signinFormAccount" novalidate>
         <div class="row">
 
           <div class="col-sm-12">
               <label for="email" class="control-label">Email</label>
             <div class="form-group">
-              <input type="email" name="email" id="email" ng-model="vm.signinModel.email" class="form-control" placeholder="example@email.com" required autocomplete="off">
+              <input type="email" name="email" id="email" ng-model="vm.signinModel.email" class="form-control" placeholder="you@youremail.com" required autocomplete="off">
             </div>
           </div>
         </div>
@@ -31,9 +37,9 @@
     <div class="row">
 
       <div class="col-sm-12">
-          <label for="email" class="control-label">Password</label>
+          <label for="email" class="control-label">Password <a class="pull-right small"> Forgotten your password?</a></label>
         <div class="form-group">
-          <input type="password" name="password" id="password" ng-model="vm.signinModel.password" class="form-control" required>
+          <input type="password" name="password" id="password" ng-model="vm.signinModel.password" class="form-control" placeholder="password" required>
         </div>
       </div>
     </div>

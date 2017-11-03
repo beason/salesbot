@@ -23,7 +23,7 @@
         url: '/register/complete',
         templateUrl: 'app/register/complete/registerComplete.template.html',
         data: {
-            tokenTypes: 'authenticated',
+            tokenTypes: 'guest',
             meta: {
               title: 'Register',
               description: ''
