@@ -1,23 +1,40 @@
-
-
-
-
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-sm-7 full-height ">
+    <div class="col-sm-12  ">
       <div class="v-align">
-  <h1 class="text-center animated fadeInLeft" ng-if="vm.user">Welcome, {{vm.user.name}}</h1>
-</div>
+        <h1 class="text-center animated fadeInLeft" ng-if="vm.user">Welcome, {{vm.user.name}}</h1>
+      </div>
 
     </div>
-    <div class="col-sm-5 full-height">
-      <div class="v-align">
+    <div class="col-sm-12">
 
-<h2>Users</h2>
-<div ng-repeat="user in vm.users">
-  {{user.name}} <span ng-if="vm.token.sub === user.id">(you)</span> <b class="pull-right">{{user.email}}</b>
-</div>
+
+      <h2>Users</h2>
+
+      <table class="table table-bordered table-sm">
+  <thead>
+    <tr>
+
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in vm.users">
+
+      <td>{{user.name}} <span ng-if="vm.token.sub === user.id">(you)</span></td>
+      <td>{{user.email}}</td>
+
+    </tr>
+
+  </tbody>
+</table>
+
     </div>
-          </div>
+
   </div>
 </div>
+<div class="d-flex w-100 justify-content-between  align-items-center">
+   <p class="mb-1">List group item heading</p>
+   <small>3 days ago</small>
+ </div>
