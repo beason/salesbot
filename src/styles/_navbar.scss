@@ -1,23 +1,13 @@
-.navbar-wrapper {
-    display: inline-block;
-    border-radius: 5px;
-    z-index: 3;
-    overflow: hidden;
-    background-clip: padding-box;
-        border: 1px solid rgba(23,24,26,0.11);
-    .navbar-item {
-        display: inline-block;
-        padding: 10px;
-        background: $white;
-        font-weight: 600;
-        color: $heading-color;
-        border-right: 1px solid rgba(23,24,26,0.11);
-        &:last-child {
-            border: none;
-        }
-        &:hover {
-            background-color: rgba($white,0.9);
-            cursor: pointer;
-        }
-    }
+.navbar {
+  background: $white;
+}
+
+.navbar-dark {
+  #logo {
+    fill: $white;
+  }
+}
+
+.navbar-brand {
+  line-height: 0px;
 }

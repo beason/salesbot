@@ -1,10 +1,71 @@
-<div id="header">
-    <div class="row">
-        <div class="col-xs-2 text-left">
-            <salesbot-logo></salesbot-logo>
-        </div>
-        <div class="col-xs-10 text-right">
-            <salesbot-navbar></salesbot-navbar>
-        </div>
-    </div>
+<!-- <div id="header" class="sticky-top">
+  <div class="d-flex w-100 justify-content-between  align-items-center">
+     <p class="mb-1">List group item heading</p>
+       <salesbot-navbar></salesbot-navbar>
+   </div>
 </div>
+
+<nav class="navbar sticky-top navbar-light bg-light">
+  <a class="navbar-brand" href="#">Sticky top</a>
+   <salesbot-navbar></salesbot-navbar>
+</nav> -->
+
+
+<nav ng-if="!$root.isLoggedIn" class="navbar navbar-expand-lg navbar-light sticky-top justify-content-between">
+  <a class="navbar-brand" ui-sref="homepage">
+    <salesbot-logo size="sm"></salesbot-logo>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" ui-sref="signin">Log in</a>
+      </li>
+    </ul>
+    <button class="btn btn-primary" ui-sref="register">Get started</button>
+  </div>
+</nav>
+
+<!-- <nav ng-if="$root.isLoggedIn" class="navbar navbar-expand-lg navbar-light sticky-top">
+  <a class="navbar-brand" ui-sref="homepage">
+    <salesbot-logo size="sm"></salesbot-logo>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Users</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Settings</a>
+      </li>
+
+    </ul>
+    <span class="navbar-text">
+
+        Welcome, {{vm.user.name |  case : "start"}}
+      </span>
+    <button class="btn btn-link" ui-sref="logout">Logout</button>
+
+  </div>
+</nav> -->

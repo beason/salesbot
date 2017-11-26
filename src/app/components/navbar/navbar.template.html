@@ -1,11 +1,17 @@
-<div class="navbar-wrapper" ng-if="$root.isLoggedIn">
+<!-- <div class="navbar-wrapper" ng-if="$root.isLoggedIn">
     <div ng-repeat="item in vm.nav" ng-if="item.state" class="navbar-item" ui-sref="{{item.link}}">
         {{item.title}}
     </div>
 </div>
 
 <div class="navbar-wrapper" ng-if="!$root.isLoggedIn">
-    <div ng-repeat="item in vm.nav" ng-if="!item.state" class="navbar-item" ui-sref="{{item.link}}">
+    <div ng-repeat="item in vm.nav" ng-if="!item.state" class="navbar-item " ui-sref="{{item.link}}">
         {{item.title}}
     </div>
-</div>
+</div> -->
+
+<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<li class="nav-item" ng-repeat="item in vm.nav" ng-if="!item.state">
+  <a class="nav-link" ui-sref="{{item.link}}">{{item.title}}</span></a>
+</li>
+</ul>

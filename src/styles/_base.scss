@@ -1,51 +1,72 @@
+html {
+  height: 100%;
+}
 body {
   background: $white;
-
   letter-spacing: normal;
 
-}
+  &.homepage-bg {
+    background: $brand-color;
+  }
 
-a {
-    color: $brand-color;
-    border-bottom: 1px solid $brand-color;
-    text-decoration: none!important;
-    &:hover {
-        color: lighten($brand-color,10%);
-        cursor: pointer;
-        border-color:lighten($brand-color,10%);
+  &.is-app {
+
+    height: 100%;
+    [ui-view] {
+      margin-left: 70px;
     }
+
+  }
 }
 
-a[disabled], a[disabled]:hover {
-   pointer-events: none;
-   opacity: 0.3;
+[ui-view] {
+  height: 100%;
 }
 
-h1, h2, h3, h4, h5 {
-    font-weight: 300;
 
-    margin-top: 0px;
+a[disabled],
+a[disabled]:hover {
+  pointer-events: none;
+  opacity: .3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 300;
+  margin-top: 0;
 }
 
 p {
   font-weight: 300;
-    &.strapline {
-        font-size: 18px;
 
-    }
+  &.strapline {
+    font-size: 18px;
+  }
 }
 
 .white-bg {
-    background-color: $white;
+  background-color: $white;
 }
 
 .brand-bg {
-    background-color: $brand-color;
-    h1,h2,h3,h4,h5 {
-        color: $white;
-    }
+  background-color: $brand-color;
 
-    p {
-        color: rgba($white,0.6);
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $white;
+  }
+
+  p {
+    color: rgba($white,0.6);
+  }
+}
+
+.jumbotron {
+  background: $brand-color;
 }

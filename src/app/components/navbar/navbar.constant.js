@@ -11,18 +11,23 @@
               state: false
           },
           {
-              title: 'Register',
-              link: 'register',
+              title: 'Pricing',
+              link: 'pricing',
               state: false
           },
           {
-              title: 'Sign in',
-              link: 'signin',
+              title: 'Contact us',
+              link: 'contact',
               state: false
           },
           {
-              title: 'Log out',
-              link: 'logout',
+              title: 'Users',
+              link: 'users',
+              state: true
+          },
+          {
+              title: 'Accounts',
+              link: 'accounts',
               state: true
           }
       ]

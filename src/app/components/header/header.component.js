@@ -10,7 +10,24 @@
     });
 
   /* @ngInject */
-  function HeaderController() {
+  function HeaderController($rootScope, store, $scope) {
+    var vm = this;
+
+    $scope.$watch('$root.isLoggedIn', function(newValue) {
+      console.log(newValue)
+      if(newValue) {
+          vm.user = store.get('user');
+
+      } else {
+        vm.user = {};
+        
+
+      }
+
+    })
+
+
+
 
   }
 })();

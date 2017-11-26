@@ -1,0 +1,17 @@
+#sidebar {
+  width: 70px;
+  background: $brand-color;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  #logo {
+    fill: $white;
+  }
+
+  .sidebar-nav {
+    i {
+      font-size: 18px;
+    }
+  }
+}

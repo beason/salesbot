@@ -20,20 +20,20 @@
 
 
       var tokenType = tokenModel.tokenType();
-      console.log(tokenTypes)
-      console.log(tokenType)
+  
 
       $rootScope.isLoggedIn = (tokenType === 'authenticated');
 
 
       if (tokenType === 'guest' && !_.includes(tokenTypes, tokenType)) {
 
-      console.log('not guest page')
+
       $state.go('signin')
       }
 
       if (tokenType === 'authenticated' && !_.includes(tokenTypes, tokenType)) {
-    $state.go('dashboard')
+
+        $state.go('dashboard')
       }
 
 

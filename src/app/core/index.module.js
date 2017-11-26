@@ -15,6 +15,7 @@
       'toastr',
       'salesbot.register',
       'salesbot.authentication',
-      'salesbot.dashboard'
+      'salesbot.dashboard',
+      'angular-storage'
     ]);
 })();

@@ -6,7 +6,7 @@
     .factory('logoutEvent', logoutEvent);
 
   /* @ngInject */
-  function logoutEvent($rootScope, $window) {
+  function logoutEvent($rootScope, $window, userModel) {
 
     var event = {
       broadcast: broadcast,
@@ -30,8 +30,9 @@
     }
 
     function callback() {
-      
-      delete $window.localStorage.token;
+
+      $window.localStorage.clear();
+      userModel.reset()
     }
   }
 })();

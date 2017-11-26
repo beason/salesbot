@@ -10,29 +10,15 @@
     });
 
   /* @ngInject */
-  function DashboardController($state, toastr, jsonApiReHydrate, apiService, tokenModel) {
+  function DashboardController($state, toastr, jsonApiReHydrate, apiService, tokenModel, userModel) {
 
     var vm = this;
-    vm.token = tokenModel.getPayload()
-    vm.getUser = getUser;
-    vm.getUsers = getUsers;
 
-    function getUser() {
-      var data = {
-        resource: 'user',
-        id: vm.token.sub
-      };
+    vm.getUsers = getUsers();
 
-      apiService.show(data).then(success, error);
-
-      function success(response) {
-        vm.user = response.data.user;
-      }
-
-      function error(response) {
-
-      }
-    }
+    userModel.getCurrent(function(response) {
+      vm.user = response;
+    });
 
     function getUsers() {
       var data = {
@@ -50,8 +36,8 @@
 
       }
     }
-    vm.getUser();
-    vm.getUsers();
+
+    getUsers();
 
   }
 })();

@@ -1,4 +1,14 @@
 #logo {
-    fill: $white;
+    fill: $brand-color;
     width: 100%;
+    &.logo-sm {
+      width: 40px;
+    }
+    &.logo-md {
+      width: 80px;
+    }
+
+    &.logo-lg {
+      width: 140px;
+    }
 }

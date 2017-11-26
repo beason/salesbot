@@ -10,7 +10,7 @@
     });
 
   /* @ngInject */
-  function SigninController($state, toastr, jsonApiReHydrate, apiService) {
+  function SigninController($state, toastr, jsonApiReHydrate, apiService, store, userService) {
 
     var vm = this;
     vm.hasError = false;
@@ -18,7 +18,7 @@
     vm.submit = submit;
 
     function submit() {
-  
+
       var data = {
        resource: 'authenticate',
        data: vm.signinModel
@@ -27,7 +27,7 @@
      apiService.store(data).then(success, error);
 
      function success(response) {
-       console.log('hi')
+
        $state.go('dashboard');
      }
      function error(response) {

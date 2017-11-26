@@ -111,7 +111,7 @@
 
     function tokenType() {
       var payload = getPayload();
-      console.log(isValid())
+    
       if (!isValid()) {
         return 'guest';
       }
