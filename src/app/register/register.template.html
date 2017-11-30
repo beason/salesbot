@@ -9,16 +9,24 @@
     </div>
     <div class="col-sm-5 full-height">
       <div class="v-align">
-
+      {{vm.registerModel|json}}
 
 
       <form name="registrationFormAccount" novalidate>
         <div class="row">
 
-          <div class="col-sm-12">
-              <label for="email" class="control-label">Your name</label>
+          <div class="col">
+              <label for="name" class="control-label">First name</label>
             <div class="form-group">
-              <input name="name" id="name" ng-model="vm.registerModel.name" class="form-control" required placeholder="Your full name">
+              <input name="name" id="name" ng-model="vm.registerModel.firstName" class="form-control" required placeholder="Your first name">
+            </div>
+
+
+          </div>
+          <div class="col">
+              <label for="surname" class="control-label">Last name</label>
+            <div class="form-group">
+              <input name="surname" id="surname" ng-model="vm.registerModel.surname" class="form-control" required placeholder="Your surname">
             </div>
 
 
@@ -38,7 +46,7 @@
       <div class="row">
 
         <div class="col-sm-12">
-            <label for="email" class="control-label">Password</label>
+            <label for="password" class="control-label">Password</label>
           <div class="form-group">
             <input type="password" name="password" ng-minlength="6" id="password" ng-model="vm.registerModel.password" class="form-control" placeholder="Password (at least 6 characters)"required>
           </div>

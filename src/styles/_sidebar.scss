@@ -1,17 +1,27 @@
 #sidebar {
   width: 70px;
-  background: $brand-color;
+  background: #1d364b;
   position: fixed;
-  top: 0px;
-  left: 0px;
-  bottom: 0px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
   #logo {
     fill: $white;
   }
 
-  .sidebar-nav {
+  .sidebar-item {
     i {
+      color: #8da2b5;
       font-size: 18px;
+    }
+
+    &:hover {
+      background: darken(#1d364b,3%);
+
+      i {
+        color: $white;
+      }
     }
   }
 }

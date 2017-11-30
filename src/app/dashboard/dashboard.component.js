@@ -13,7 +13,7 @@
   function DashboardController($state, toastr, jsonApiReHydrate, apiService, tokenModel, userModel) {
 
     var vm = this;
-
+    vm.state = $state;
     vm.getUsers = getUsers();
 
     userModel.getCurrent(function(response) {

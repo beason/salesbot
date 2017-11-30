@@ -10,9 +10,9 @@
     });
 
   /* @ngInject */
-  function CalendarController(userModel) {
+  function CalendarController(userModel, $state) {
     var vm = this;
-
+    vm.state = $state;
 
     userModel.getCurrent(function(response) {
       vm.user = response;

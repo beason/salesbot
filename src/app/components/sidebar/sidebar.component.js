@@ -10,8 +10,12 @@
     });
 
   /* @ngInject */
-  function SidebarController($rootScope, userService) {
+  function SidebarController($rootScope, userModel) {
     var vm = this;
+    
+    userModel.getCurrent(function(response) {
+      vm.user = response;
+    });
 
 
   }

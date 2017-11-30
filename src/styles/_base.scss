@@ -4,7 +4,7 @@ html {
 body {
   background: $white;
   letter-spacing: normal;
-
+  color: #1d364b;
   &.homepage-bg {
     background: $brand-color;
   }
@@ -14,6 +14,7 @@ body {
     height: 100%;
     [ui-view] {
       margin-left: 70px;
+      background: #f0f4f7;
     }
 
   }
